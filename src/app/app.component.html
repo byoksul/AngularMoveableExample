@@ -1,0 +1,37 @@
+<div class="label" #label></div>
+<div class="page main">
+  <div class="container">
+    <div class="moveable" #target>
+      <img height="100%" width="100%" src="../assets/merso.avif"/>
+    </div>
+    <ngx-moveable
+      #moveable
+      [target]="target"
+      [draggable]="true"
+      [origin]="false"
+      [rotatable]="true"
+      [pinchable]="true"
+      [scalable]="scalable"
+      [resizable]="resizable"
+      [warpable]="warpable"
+      [keepRatio]="false"
+      [throttleDrag]="1"
+      [throttleScale]="0.01"
+      [throttleRotate]="0.2"
+      [throttleResize]="1"
+      [dragArea]="true"
+      (drag)="onDrag($event)"
+      (resize)="onResize($event)"
+      (scale)="onScale($event)"
+      (warp)="onWarp($event)"
+      (rotate)="onRotate($event)"
+      (dragEnd)="onEnd()"
+      (resizeEnd)="onEnd()"
+      (scaleEnd)="onEnd()"
+      (warpEnd)="onEnd()"
+      (rotateEnd)="onEnd()"
+      (click)="onClick($event)"
+    >
+    </ngx-moveable>
+  </div>
+</div>
